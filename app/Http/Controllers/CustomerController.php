@@ -15,7 +15,6 @@ class CustomerController extends Controller
 
         // Checks if the client json exists
         $path = database_path("timeline_$customer.json");
-
         // error handling
         if (!file_exists($path)) {
             return [ 'message' => 'Dados não encontrado!' ];
@@ -26,7 +25,6 @@ class CustomerController extends Controller
 
         return $data;
     }
-    
     // FORMAT =======================================================
     // accession_number : 0
     // avg_exam_duration : 3.325245098
@@ -83,7 +81,7 @@ class CustomerController extends Controller
     //             $start->format('Y-m-d') === $date->format('Y-m-d')
     //         ){
     //             $keys[$k] = $k;
-    //         }           
+    //         }
     //     }
 
     //     $data = [];
@@ -113,7 +111,7 @@ class CustomerController extends Controller
                 $start->format('Y-m-d') === $date->format('Y-m-d')
             ){
                 $keys[$k] = $k;
-            }           
+            }
         }
 
         $data = [];
